@@ -7,7 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Leilao.Data.Repositories.Standard
@@ -15,7 +14,7 @@ namespace Leilao.Data.Repositories.Standard
     public class Repository<Entity> : IRepository<Entity> where Entity : BaseEntity
     {
         protected readonly PublicSaleContext _context;
-        private DbSet<Entity> _dataset;
+        private readonly DbSet<Entity> _dataset;
 
         public Repository(PublicSaleContext context, DbSet<Entity> dataSet)
         {

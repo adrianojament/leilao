@@ -1,9 +1,6 @@
 ﻿using Leilao.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Leilao.Data.Mapping
 {
@@ -14,8 +11,8 @@ namespace Leilao.Data.Mapping
             builder.ToTable("publicsales");
             builder.UseXminAsConcurrencyToken();
 
-            builder.HasKey(u => u.Id);            
-            
+            builder.HasKey(u => u.Id);
+
             builder.Property(u => u.Name).IsRequired().HasMaxLength(100);
             builder.Property(u => u.InitalValue).IsRequired();
 

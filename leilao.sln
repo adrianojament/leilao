@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leilao.CrossCutting", "Leil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leilao.Service", "Leilao.Service\Leilao.Service.csproj", "{874984A0-7F0A-4B4C-BCCE-AB6DFB27EB47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leilao.Application", "Leilao.Application\Leilao.Application.csproj", "{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{874984A0-7F0A-4B4C-BCCE-AB6DFB27EB47}.Release|x64.Build.0 = Release|Any CPU
 		{874984A0-7F0A-4B4C-BCCE-AB6DFB27EB47}.Release|x86.ActiveCfg = Release|Any CPU
 		{874984A0-7F0A-4B4C-BCCE-AB6DFB27EB47}.Release|x86.Build.0 = Release|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Debug|x64.Build.0 = Debug|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Debug|x86.Build.0 = Debug|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Release|x64.ActiveCfg = Release|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Release|x64.Build.0 = Release|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Release|x86.ActiveCfg = Release|Any CPU
+		{799F4621-1FE6-4DBE-8A4E-E6A48FAA2AED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

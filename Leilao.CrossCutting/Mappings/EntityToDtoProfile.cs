@@ -2,9 +2,6 @@
 using Leilao.Domain.Dtos.PublicSale;
 using Leilao.Domain.Dtos.User;
 using Leilao.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Leilao.CrossCutting.Mappings
 {

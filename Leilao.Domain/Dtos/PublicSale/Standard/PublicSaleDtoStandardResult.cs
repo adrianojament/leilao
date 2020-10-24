@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace Leilao.Domain.Dtos.PublicSale.Standard
 {
