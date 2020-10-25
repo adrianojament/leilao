@@ -8,6 +8,6 @@ namespace Leilao.Domain.Dtos.PublicSale.Standard
         public string Name { get; set; }
         public double InitalValue { get; set; }
         public bool Used { get; set; }
-        public Guid IdResponsibleUser { get; set; }
+        public Guid ResponsibleUserId { get; set; }
     }
 }

@@ -71,6 +71,12 @@ namespace Leilao.Application.Controllers.v1
 
             try
             {
+                var validation = await _service.Validation(dtoCreate);
+                if (!validation.Sucess)
+                {
+                    return StatusCode((int)HttpStatusCode.BadRequest, validation.Message);
+                }
+
                 var result = await _service.Post(dtoCreate);
                 if (result != null)
                 {
@@ -97,14 +103,27 @@ namespace Leilao.Application.Controllers.v1
             }
 
             try
-            {
+            {                
+
                 var result = await _service.Get(id);
                 if (result == null)
                 {
                     return NotFound();
                 }
 
-                return Ok(result);
+                if (!result.Id.Equals(dtoUpdate.Id))
+                {
+                    return StatusCode((int)HttpStatusCode.BadRequest, "Id nao informado.");
+                }
+
+                var validation = await _service.Validation(dtoUpdate, id);
+                if (!validation.Sucess)
+                {
+                    return StatusCode((int)HttpStatusCode.BadRequest, validation.Message);
+                }
+
+                var result2 = await _service.Put(dtoUpdate);
+                return Ok(result2);
             }
             catch (ArgumentException e)
             {
