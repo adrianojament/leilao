@@ -1,0 +1,26 @@
+<h3>Dados dos usuários</h3>
+<div *ngIf="findingdata">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>
+<div *ngIf="!findingdata && !error">
+  <button
+    mat-flat-button
+    color="primary"
+    aria-label="Adicionar um novo Contato"
+    (click)="NewUser()"
+  >
+    <mat-icon>add</mat-icon>
+    Novo Contato
+  </button>
+  <mat-nav-list>
+    <mat-list-item *ngFor="let user of users">
+      <a matLine (click)="alterUser(user.id)">{{ user.name }}</a>
+      <a matLine (click)="alterUser(user.id)">{{ user.email }}</a>
+      <button (click)="remove(user.id)" mat-icon-button>
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-nav-list>
+</div>

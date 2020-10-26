@@ -1,0 +1,18 @@
+<div style="height: 100vh">
+  <mat-toolbar color="primary">
+    <span>Leilão Online</span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a [routerLink]="['/publicsales']" mat-button>Cadastrar Item</a>
+      <a [routerLink]="['/users']" mat-button>Dados do Usuário</a>
+      <a [routerLink]="['/allItensPublicSales']" mat-button
+        >Itens para Leilao</a
+      >
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav-content fxFlexFill class="spaces">
+      <router-outlet></router-outlet
+    ></mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
