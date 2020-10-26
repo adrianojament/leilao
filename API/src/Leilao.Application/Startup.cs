@@ -59,6 +59,17 @@ namespace Leilao.Application
                  };
              });
 
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyOrigin();
+                    policy.AllowAnyMethod();
+                    policy.AllowAnyHeader();                                    
+                });
+            });
+
             services.AddControllers();
             ConfigureSwagger(services);
 
@@ -131,6 +142,8 @@ namespace Leilao.Application
                 app.UseHsts();
             }
 
+
+            app.UseCors("CorsPolicy");
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Leilao.Application v1"));
 

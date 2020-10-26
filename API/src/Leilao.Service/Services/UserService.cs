@@ -6,6 +6,7 @@ using Leilao.Domain.Entities;
 using Leilao.Domain.Interfaces.Repositories;
 using Leilao.Domain.Interfaces.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -31,6 +32,12 @@ namespace Leilao.Service.Services
         {
             var entity = await _repository.SelectAsync(id);
             return _mapper.Map<UserDto>(entity);
+        }
+
+        public async Task<IEnumerable<UserDto>> Get()
+        {
+            var entity = await _repository.SelectAsync();
+            return _mapper.Map<IEnumerable<UserDto>>(entity);
         }
 
         public async Task<UserDtoCreateResult> Post(UserDtoCreate user)

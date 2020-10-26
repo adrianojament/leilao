@@ -20,7 +20,25 @@ namespace Leilao.Application.Controllers.v1
         {
             _service = service;
         }
-                
+
+        [HttpGet()]
+        public async Task<ActionResult> Get()
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {                
+                return Ok(await _service.Get());
+            }
+            catch (ArgumentException e)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+            }
+        }
+
         [HttpGet("{id}", Name = "GetUserWithId")]
         public async Task<ActionResult> Get(Guid id)
         {
